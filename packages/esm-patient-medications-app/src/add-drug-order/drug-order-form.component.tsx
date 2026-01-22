@@ -81,9 +81,9 @@ function MedicationInfoHeader({
 
   return (
     <div className={styles.medicationInfo} id="medicationInfo">
-      <strong className={styles.productiveHeading02}>
+      <h2 className={styles.productiveHeading02}>
         {drug?.display} {drug?.strength && `(${drug?.strength})`}
-      </strong>{' '}
+      </h2>{' '}
       <span className={styles.bodyLong01}>
         {routeValue && <>&mdash; {routeValue}</>}{' '}
         {drug?.dosageForm?.display && <>&mdash; {drug?.dosageForm?.display}</>}{' '}
@@ -333,7 +333,7 @@ export function DrugOrderForm({
                 subtitle={t('tryReopeningTheForm', 'Please try launching the form again')}
               />
             )}
-            <h1 className={styles.orderFormHeading}>{t('orderForm', 'Order Form')}</h1>
+            <h2 className={styles.orderFormHeading}>{t('orderForm', 'Order Form')}</h2>
             <div ref={medicationInfoHeaderRef}>
               <MedicationInfoHeader dosage={dosage} drug={drug} routeValue={routeValue} unitValue={unitValue} />
             </div>
